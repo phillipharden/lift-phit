@@ -1,0 +1,290 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@email.com",
+      "password": "john123",
+      "weight": 175,
+      "bf": 12,
+      "avatar": "https://cdn.pixabay.com/photo/2022/12/24/21/14/portrait-7676482_1280.jpg"
+    },
+    {
+      "id": 2,
+      "firstName": "Sam",
+      "lastName": "Smith",
+      "email": "sam@email.com",
+      "password": "sam123",
+      "weight": 180,
+      "bf": 9,
+      "avatar": "https://cdn.pixabay.com/photo/2016/03/26/22/13/man-1281562_1280.jpg"
+    },
+    {
+      "id": 3,
+      "firstName": "Chris",
+      "lastName": "Wilson",
+      "email": "chris@email.com",
+      "password": "chris123",
+      "weight": 320,
+      "bf": 28,
+      "avatar": "https://cdn.pixabay.com/photo/2016/08/25/19/37/man-1620502_1280.jpg"
+    },
+    {
+      "id": 4,
+      "firstName": "Tom",
+      "lastName": "Williams",
+      "email": "tom@email.com",
+      "password": "tom123",
+      "weight": 225,
+      "bf": 22,
+      "avatar": "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_1280.jpg"
+    },
+    {
+      "firstName": "J",
+      "lastName": "D",
+      "email": "jd@email.com",
+      "password": "jd123",
+      "weight": 175,
+      "bf": 23,
+      "avatar": "https://cdn.pixabay.com/photo/2022/12/24/21/14/portrait-7676482_1280.jpg",
+      "id": 5
+    }
+  ],
+  "workouts": [
+    {
+      "id": 1,
+      "name": "workout a"
+    },
+    {
+      "id": 2,
+      "name": "workout b"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "workout test"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "name": "workout a1"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "name": "workout b2"
+    }
+  ],
+  "exercises": [
+    {
+      "id": 1,
+      "workoutId": 1,
+      "name": "squat",
+      "tutorial": "nhoikoUEI8U"
+    },
+    {
+      "id": 2,
+      "workoutId": 1,
+      "name": "bench press",
+      "tutorial": "rxD321l2svE"
+    },
+    {
+      "id": 3,
+      "workoutId": 1,
+      "name": "deadlift",
+      "tutorial": "p2OPUi4xGrM"
+    },
+    {
+      "id": 4,
+      "workoutId": 2,
+      "name": "squat",
+      "tutorial": "nhoikoUEI8U"
+    },
+    {
+      "id": 5,
+      "workoutId": 2,
+      "name": "overhead press",
+      "tutorial": "8dacy5hjaE8"
+    },
+    {
+      "id": 6,
+      "workoutId": 2,
+      "name": "bent-over row",
+      "tutorial": "6JVSjte9F-M"
+    }
+  ],
+  "activity": [
+    {
+      "id": 1,
+      "exerciseId": 1,
+      "sets": 3,
+      "reps": 5,
+      "weight": 225
+    },
+    {
+      "id": 2,
+      "exerciseId": 2,
+      "sets": 3,
+      "reps": 5,
+      "weight": 225
+    },
+    {
+      "id": 3,
+      "exerciseId": 3,
+      "sets": 3,
+      "reps": 5,
+      "weight": 225
+    },
+    {
+      "id": 4,
+      "exerciseId": 4,
+      "sets": 3,
+      "reps": 5,
+      "weight": 135
+    },
+    {
+      "id": 5,
+      "exerciseId": 5,
+      "sets": 3,
+      "reps": 5,
+      "weight": 135
+    },
+    {
+      "id": 5,
+      "exerciseId": 6,
+      "sets": 3,
+      "reps": 5,
+      "weight": 135
+    }
+  ],
+  "trackedworkouts": [
+    {
+      "id": 21,
+      "userId": 1,
+      "name": "workout a",
+      "exercises": [
+        {
+          "id": 1,
+          "name": "squat",
+          "sets": [
+            {
+              "id": 1,
+              "name": "set 1",
+              "reps": 5,
+              "weight": 225
+            },
+            {
+              "id": 2,
+              "name": "set 2",
+              "reps": 5,
+              "weight": 225
+            },
+            {
+              "id": 3,
+              "name": "set 3",
+              "reps": 4,
+              "weight": 225
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "bench",
+          "sets": [
+            {
+              "id": 1,
+              "name": "set 1",
+              "reps": 5,
+              "weight": 155
+            },
+            {
+              "id": 2,
+              "name": "set 2",
+              "reps": 4,
+              "weight": 155
+            },
+            {
+              "id": 3,
+              "name": "set 3",
+              "reps": 3,
+              "weight": 155
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "deadlift",
+          "sets": [
+            {
+              "id": 1,
+              "name": "set 1",
+              "reps": 5,
+              "weight": 275
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "workout b"
+    },
+    {
+      "name": "workout a",
+      "exercises": [
+        {
+          "name": "squat",
+          "sets": [
+            {
+              "name": "set 1",
+              "reps": 5,
+              "weight": 295
+            },
+            {
+              "name": "set 2",
+              "reps": 5,
+              "weight": 295
+            },
+            {
+              "name": "set 3",
+              "reps": 5,
+              "weight": 295
+            }
+          ]
+        },
+        {
+          "name": "bench",
+          "sets": [
+            {
+              "name": "set 1",
+              "reps": 5,
+              "weight": 185
+            },
+            {
+              "name": "set 2",
+              "reps": 5,
+              "weight": 185
+            },
+            {
+              "name": "set 3",
+              "reps": 5,
+              "weight": 185
+            }
+          ]
+        },
+        {
+          "name": "deadlift",
+          "sets": [
+            {
+              "name": "set 1",
+              "reps": 5,
+              "weight": 315
+            }
+          ]
+        }
+      ],
+      "id": 22
+    }
+  ]
+}

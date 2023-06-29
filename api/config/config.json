@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "workout_tracker",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "admin",
+    "password": "2225680pmH!",
+    "database": "lift-phit-server",
+    "host": "aws-lift-phit.ckyumuargmdg.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "admin",
+    "password": "2225680pmH!",
+    "database": "lift-phit-server",
+    "host": "aws-lift-phit.ckyumuargmdg.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

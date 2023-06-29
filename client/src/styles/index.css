@@ -1,0 +1,15 @@
+:root {
+  --body_background: #A9A9A9;
+  --body_background_secondary: #BBDEFB;
+  --body_color: #212121;
+
+  --primary_color: #1976D2;
+  --primary_color_light:   #BBDEFB; 
+  --primary_color_dark: #2196F3; 
+  --accent_color:  #00BCD4;
+
+  --color_white:  #FFFFFF; 
+  --color_light_gray :#BDBDBD; 
+  --color_dark_gray: #757575; 
+  --color_black:   #212121; 
+}
