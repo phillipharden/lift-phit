@@ -68,11 +68,24 @@ router.post("/:id", async (req, res) => {
 });
 
 //^ DELETE WORKOUT BY ID
-router.get("/:id/delete", async (req, res) => {
-  const deleted = await Workout.destroy({
-    where: { id: Number(req.params.id) },
-  });
-  res.redirect("/workouts");
+router.delete("/delete/:id", async (req, res) => {
+  try {
+    const deleted = await Workout.destroy({
+      where: { id: Number(req.params.id) },
+    });
+    res.redirect("/workouts"); 
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Failed to delete workout." });
+  }
 });
+
+
+// router.get("/:id", async (req, res) => {
+//   const deleted = await Workout.destroy({
+//     where: { id: Number(req.params.id) },
+//   });
+//   res.redirect("/workouts");
+// });
 
 module.exports = router;

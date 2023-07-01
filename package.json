@@ -3,19 +3,12 @@
   "version": "1.0.0",
   "description": "### Phillip Harden / Student ID: 0004964305",
   "main": "index.js",
-  "proxy": "http://localhost:4444",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "(cd client && npm run start) & nodemon index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ePortfolios/WDD-2305-HardenPhillip"
   },
   "keywords": [],
   "author": "",
@@ -29,7 +22,6 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "jsonwebtoken": "^9.0.0",
-    "mysql": "^2.18.1",
     "mysql2": "^3.4.1",
     "sequelize": "^6.32.1"
   },

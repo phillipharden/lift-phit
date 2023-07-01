@@ -32,7 +32,6 @@ const App = () => {
       try {
         const decodedToken = jwtDecode(token);
         const { id, name, email } = decodedToken;
-
         // Set the currentUser object with name and email properties
         setCurrentUser({ id, name, email });
       } catch (error) {
@@ -44,24 +43,14 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem('token', jwt);
+    if (window.localStorage.getItem("token")) {
+      setJwt(window.localStorage.getItem("token"));
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("token", jwt);
   }, [jwt]);
-
-  // useEffect(() => {
-  //   if (window.localStorage.getItem("token")) {
-  //     setJwt(window.localStorage.getItem("token"));
-
-  //     const { name, email } = decodedToken;
-
-
-
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   window.localStorage.setItem("token", jwt);
-  // }, [jwt]);
-
   
   console.log(jwt);
   console.log(currentUser);

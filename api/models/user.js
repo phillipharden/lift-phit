@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.User.hasMany(models.Workout)
+      models.User.hasMany(models.Workout, { onDelete: 'CASCADE' });
     }
   }
   User.init({

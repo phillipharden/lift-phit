@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.Exercise.belongsTo(models.Workout)
-      models.Exercise.hasMany(models.Set)
+      models.Exercise.belongsTo(models.Workout, { onDelete: 'CASCADE' });
+      models.Exercise.hasMany(models.Set, { onDelete: 'CASCADE' });
     }
   }
   Exercise.init({

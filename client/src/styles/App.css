@@ -46,6 +46,21 @@ body {
   outline: none;
 }
 
+.container-700 {
+  max-width: 700px;
+  /* margin: 0 auto;  */
+  padding: 10px;
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width: 1000px) {
+  .container-700 {
+    max-width: 100%;
+  }
+}
+
+
+
 .outline {
   outline: 5px solid yellow;
 }
