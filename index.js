@@ -43,15 +43,14 @@ app.use("/exercises", exercisesCtrl);
 app.use("/sets", setsCtrl);
 app.use("/auth", authCtrl);
 
-app.listen(4444, function () {
-  console.log("Server is running on port 4444");
+÷
 });
 
 // http://localhost:4444/ in the web browser
 
-// ^ app.listen(process.env.PORT || 4444, function () {
-// ^   console.log("Server is running on Heroku");
-// ^ }); // http://localhost:4444/ in the web browser
+^ app.listen(process.env.PORT || 4444, function () {
+^   console.log("Server is running on Heroku");
+^ }); // http://localhost:4444/ in the web browser
 
 // COLORFUL COMMENTS
 //! Red (!)
