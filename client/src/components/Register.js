@@ -15,7 +15,7 @@ const Register = () => {
     } else {
       try {
         const response = await axios.post(
-          "http://localhost:4444/auth/register",
+          "http://localhost:4444/api/auth/register",
           input
         );
         console.log(response);

@@ -39,11 +39,11 @@ app.get("/", (req, res) => {
   res.send("Home Page"); 
 });
 
-app.use("/users", usersCtrl);
-app.use("/workouts", workoutsCtrl);
-app.use("/exercises", exercisesCtrl);
-app.use("/sets", setsCtrl);
-app.use("/auth", authCtrl);
+app.use("/api/users", usersCtrl);
+app.use("/api/workouts", workoutsCtrl);
+app.use("/api/exercises", exercisesCtrl);
+app.use("/api/sets", setsCtrl);
+app.use("/api/auth", authCtrl);
 
 const path = require("path");
 app.use(express.static(path.join(__dirname, "./reactjs/build")));

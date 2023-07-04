@@ -7,6 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd reactjs && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "(cd client && npm run start) & nodemon index.js"
   },

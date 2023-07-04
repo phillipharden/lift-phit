@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4444/auth/login",
+        "http://localhost:4444/api/auth/login",
         input
       );
       setJwt(response.data.token);
