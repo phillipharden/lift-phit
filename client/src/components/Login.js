@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/auth/login",
+        "http://localhost:4444/auth/login",
         input
       );
       setJwt(response.data.token);
@@ -32,7 +32,7 @@ const Login = () => {
     const value = e.target.value;
     setInput((prevState) => ({ ...prevState, [name]: value }));
   };
-
+  console.log(input)
   return (
     <form className="login-form mt-5 w-100">
       <h2 className="mb-3 ">Login</h2>

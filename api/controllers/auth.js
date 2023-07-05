@@ -19,25 +19,20 @@ router.get("/test", async (req, res) => {
 router.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
   console.log(req.body);
-  //^ CONFIRM THAT NAME WAS ENTERED
   if (!name) {
     return res.status(406).json({ error: "Please enter your name." });
   }
-  //^ CONFIRM THAT NAME WAS ENTERED
   if (!email) {
     return res.status(406).json({ error: "Please enter your email." });
   }
-  //^ CONFIRM THAT NAME WAS ENTERED
   if (!password) {
     return res.status(406).json({ error: "Please enter a password." });
   }
-  //^ TEST TO SEE IF A USER WITH THE SAME EMAIL ALREADY EXISTS
   const existCheck = await User.findOne({
     where: {
       email: email,
     },
   });
-  //^ SEND BACK AN ERROR MESSAGE IF A USER ALREADY EXISTS WITH THE SAME EMAIL
   if (existCheck) {
     return res.status(409).json({ error: "Email already exists." });
   }
@@ -57,46 +52,47 @@ router.post("/register", async (req, res) => {
 //^ LOGIN USER
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  if (!email) {
-    return res.status(400).json({ error: "Please enter an email." });
-  }
-  if (!password) {
-    return res.status(400).json({ error: "Please enter your password." });
-  }
+  console.log("Email : " + email);
+  // if (!email) {
+  //   return res.status(400).json({ error: "Please enter an email." });
+  // }
+  // if (!password) {
+  //   return res.status(400).json({ error: "Please enter your password." });
+  // }
 
-  const user = await User.findOne({
-    where: {
-      email: email,
-    },
-  });
-  if (!user) {
-    return res.status(400).json({ error: "User not found. Please try again." });
-  }
-  const passwordConfirm = await bcrypt.compare(password, user.password);
-  if (!passwordConfirm) {
-    return res.status(401).json({ error: "Invalid password." });
-  }
+  // const user = await User.findOne({
+  //   where: {
+  //     email: email,
+  //   },
+  // });
+  // if (!user) {
+  //   return res.status(400).json({ error: "User not found. Please try again." });
+  // }
+  // const passwordConfirm = await bcrypt.compare(password, user.password);
+  // if (!passwordConfirm) {
+  //   return res.status(401).json({ error: "Invalid password." });
+  // }
 
-  //^ HANDLE THE TOKEN, GRAB USER INFO
-  const token = jwt.sign(
-    {
-      id: user.id,
-      name: user.name,
-      email: user.email    
-    },
-    process.env.JWT_SECRET,
-    {
-      expiresIn: "12h",
-    }
-  );
-  req.session.access_token = token;
-  const loginToken = await LoginToken.create({ token: token });
+  // //^ HANDLE THE TOKEN, GRAB USER INFO
+  // const token = jwt.sign(
+  //   {
+  //     id: user.id,
+  //     name: user.name,
+  //     email: user.email    
+  //   },
+  //   process.env.JWT_SECRET,
+  //   {
+  //     expiresIn: "12h",
+  //   }
+  // );
+  // req.session.access_token = token;
+  // const loginToken = await LoginToken.create({ token: token });
 
-  req.session.user = user;
+  // req.session.user = user;
 
-  res
-    .status(200)
-    .json({ message: "Successfully Logged In", token: token, user: user });
+  // res
+  //   .status(200)
+  //   .json({ message: "Successfully Logged In", token: token, user: user });
 });
 
 router.get("/token", async (req, res) => {

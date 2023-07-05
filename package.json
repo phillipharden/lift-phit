@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "(cd client && npm run start) & nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
