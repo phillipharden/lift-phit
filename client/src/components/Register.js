@@ -15,7 +15,7 @@ const Register = () => {
     } else {
       try {
         const response = await axios.post(
-          "https://lift-phit-app-e3a0d3df8e30.herokuapp.com/api/auth/register",
+          "http://localhost:4000/api/auth/register",
           input
         );
         console.log(response);

@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://lift-phit-app-e3a0d3df8e30.herokuapp.com/api/auth/login",
+        "http://localhost:4000/api/auth/login",
         input
       );
       setJwt(response.data.token);

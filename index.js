@@ -24,16 +24,16 @@ const authCtrl = require("./api/controllers/auth");
 const session = require("express-session");
 app.use(
   session({
-    secret: "monkey_fist",
+    secret: "suckerpunch",
     cookie: { maxAge: 60000 },
     saveUninitialized: false,
   })
 );
-const cookieParser = require("cookie-parser");
-app.use(cookieParser());
-app.get("/api", (request, response, next) => {
-  response.send("Sunday Setlist API.");
-});
+// const cookieParser = require("cookie-parser");
+// app.use(cookieParser());
+// app.get("/api", (request, response, next) => {
+//   response.send("Sunday Setlist API.");
+// });
 
 app.get("/", (req, res) => {
   res.send("Home Page"); 
@@ -54,21 +54,6 @@ app.get("/*", (req, res) => {
 
 // http://localhost:4444/ in the web browser
 
-app.listen(4444, () => {
-  console.log("Server running on port 444");
-
-
-
-
-
-
-
-// COLORFUL COMMENTS
-//! Red (!)
-//? Blue (?)
-//* Green (*)
-//^ Yellow (^)
-//& Pink (&)
-//~ Purple (~)
-//todo Mustard (todo)
-// Grey (//)
+app.listen(4444, function () {
+  console.log("Server is running on 4444");
+});
