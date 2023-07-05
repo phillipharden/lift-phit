@@ -1,25 +1,23 @@
 {
   "development": {
-    "username": "bccd30afcc70a7",
-    "password": "fbe4f45b",
-    "database": "heroku_9383922f83fbc51",
-    "host": "us-cdbr-east-06.cleardb.net",
+    "username": "root",
+    "password": null,
+    "database": "workout_tracker",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "bccd30afcc70a7",
-    "password": "fbe4f45b",
-    "database": "heroku_9383922f83fbc51",
-    "host": "us-cdbr-east-06.cleardb.net",
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "bccd30afcc70a7",
-    "password": "fbe4f45b",
-    "database": "heroku_9383922f83fbc51",
-    "host": "us-cdbr-east-06.cleardb.net",
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }
-
-

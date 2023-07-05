@@ -1,4 +1,4 @@
-const port = process.env.PORT || 4444;
+// const port = process.env.PORT || 4444;
 require("dotenv").config();
 const express = require("express");
 const app = express();
@@ -54,8 +54,8 @@ app.get("/*", (req, res) => {
 
 // http://localhost:4444/ in the web browser
 
-app.listen(port, () => {
-  console.log("Server running on port " + port);
+app.listen(4444, () => {
+  console.log("Server running on port 444");
 
 
 
