@@ -52,47 +52,46 @@ router.post("/register", async (req, res) => {
 //^ LOGIN USER
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  console.log("Email : " + email);
-  // if (!email) {
-  //   return res.status(400).json({ error: "Please enter an email." });
-  // }
-  // if (!password) {
-  //   return res.status(400).json({ error: "Please enter your password." });
-  // }
+  if (!email) {
+    return res.status(400).json({ error: "Please enter an email." });
+  }
+  if (!password) {
+    return res.status(400).json({ error: "Please enter your password." });
+  }
 
-  // const user = await User.findOne({
-  //   where: {
-  //     email: email,
-  //   },
-  // });
-  // if (!user) {
-  //   return res.status(400).json({ error: "User not found. Please try again." });
-  // }
-  // const passwordConfirm = await bcrypt.compare(password, user.password);
-  // if (!passwordConfirm) {
-  //   return res.status(401).json({ error: "Invalid password." });
-  // }
+  const user = await User.findOne({
+    where: {
+      email: email,
+    },
+  });
+  if (!user) {
+    return res.status(400).json({ error: "User not found. Please try again." });
+  }
+  const passwordConfirm = await bcrypt.compare(password, user.password);
+  if (!passwordConfirm) {
+    return res.status(401).json({ error: "Invalid password." });
+  }
 
-  // //^ HANDLE THE TOKEN, GRAB USER INFO
-  // const token = jwt.sign(
-  //   {
-  //     id: user.id,
-  //     name: user.name,
-  //     email: user.email    
-  //   },
-  //   process.env.JWT_SECRET,
-  //   {
-  //     expiresIn: "12h",
-  //   }
-  // );
-  // req.session.access_token = token;
-  // const loginToken = await LoginToken.create({ token: token });
+  //^ HANDLE THE TOKEN, GRAB USER INFO
+  const token = jwt.sign(
+    {
+      id: user.id,
+      name: user.name,
+      email: user.email    
+    },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: "12h",
+    }
+  );
+  req.session.access_token = token;
+  const loginToken = await LoginToken.create({ token: token });
 
-  // req.session.user = user;
+  req.session.user = user;
 
-  // res
-  //   .status(200)
-  //   .json({ message: "Successfully Logged In", token: token, user: user });
+  res
+    .status(200)
+    .json({ message: "Successfully Logged In", token: token, user: user });
 });
 
 router.get("/token", async (req, res) => {

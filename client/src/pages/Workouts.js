@@ -37,15 +37,13 @@ const Workouts = () => {
       setError(err.response.data.error);
     }
   };
-
-   
-
+  
   console.log("My error: " + err);
   
   return (
-    <div className="mt-5 vh-100 container outline">
+    <div className="mt-5 vh-100 container">
       <h1 className="mb-3 h4">Your Workout History</h1>
-      <div className=" container-700 outline">
+      <div className=" container-700">
       {workouts.length === 0 ? (
       <div>
         <p>You do not have any saved workouts.</p>
