@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://liftphit-8d650bb80f3f.herokuapp.com//api/auth/login",
+        "https://liftphit-8d650bb80f3f.herokuapp.com/api/auth/login",
         input
       );
       setJwt(response.data.token);
