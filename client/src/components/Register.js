@@ -15,7 +15,7 @@ const Register = () => {
     } else {
       try {
         const response = await axios.post(
-          "https://liftphit-8d650bb80f3f.herokuapp.com/api/auth/register",
+          "https://lift-phit-app-e3a0d3df8e30.herokuapp.com/api/auth/register",
           input
         );
         console.log(response);
