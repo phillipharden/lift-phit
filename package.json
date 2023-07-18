@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",    
-    "dev": "(cd client && npm run start) & nodemon index.jsc"
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "dev": "(cd client && npm run start) & nodemon index.jsc"
   },
   "keywords": [],
   "author": "",
