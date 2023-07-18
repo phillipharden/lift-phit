@@ -46,9 +46,9 @@ app.use("/sets", setsCtrl);
 app.use("/auth", authCtrl);
 
 const path = require("path");
-app.use(express.static(path.join(__dirname, "./reactjs/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 app.get("/*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./reactjs/build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
 
 
