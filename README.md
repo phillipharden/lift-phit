@@ -1,6 +1,6 @@
-# Final Project
 
-### Phillip Harden / Student ID: 0004964305
+
+### Phillip Harden
 
 Hello there! I'm Phillip, a resident of Atlanta, GA, and I'm currently studying web development. During my free time, I like to indulge in sci-fi films and comedies. When it comes to music, I have a deep appreciation for all genres and I'm more than willing to invest in a Spotify or Apple Music account for the rest of my life. My family, which includes my lovely 4-year-old daughter and my spouse, serves as a great inspiration for me to pursue a career in web development.
 
@@ -9,4 +9,3 @@ My journey with coding began when I started tinkering with MySpace. I used to co
 
 ![Degree Program](https://img.shields.io/badge/degree-web%20design%20%26%20development-blue.svg)&nbsp; 
 
-pmharden@student.fullsail.edu -- (404) 263-6744
