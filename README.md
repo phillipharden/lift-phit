@@ -1,6 +1,38 @@
+# Lift Phit 💪🔥
 
+### A fitness-focused website built to promote healthy living, strength training, and personal wellness through structured workouts and motivational content.
 
-### Lift Phit
+## 🚀 Features
 
-This app will allow users to create an account and log in to track their progress. Once the user is logged in, they will be able to track their workouts saving information such as the exercies performed, the number of sets performs, and the weight and amount of reps perfromed for each set. 
+- 💪 Workout-focused content and fitness guidance  
+- 🏋️ Strength training emphasis  
+- 📋 Organized layout for fitness information  
+- 🎯 Clean and simple user experience  
+- 📱 Fully responsive design (mobile-friendly)  
 
+## 🛠️ Tech Stack
+
+- HTML – Structure  
+- CSS – Styling  
+- JavaScript – Functionality  
+
+## 📂 Installation & Setup
+
+Clone this repo and open the project:
+
+git clone https://github.com/phillipharden/lift-phit.git  
+cd lift-phit  
+
+Open `index.html` in your browser to view the site  
+
+<br/>
+
+## 🌍 Live Demo
+
+(currently no live demo)
+
+## 🙌 Credits
+
+Website built by Phillip Harden  
+
+Designed as a fitness website to promote strength training, healthy habits, and overall wellness
