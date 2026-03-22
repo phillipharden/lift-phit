@@ -36,3 +36,10 @@ Open `index.html` in your browser to view the site
 Website built by Phillip Harden  
 
 Designed as a fitness website to promote strength training, healthy habits, and overall wellness
+
+
+
+
+
+
+Fixed security vulnerabilities and update dependencies (flatted CVE resolved) 
